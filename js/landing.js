@@ -54,9 +54,9 @@ function prevSlide() {
         theChecker();
 }
 function theChecker() {
-    commentcontainer.classList.add('fade-in'); // Remove the fade-out class to reset the opacity
+    commentcontainer.classList.add('fade-in'); 
 setTimeout(function() {
-    commentcontainer.classList.remove('fade-in'); // Add the fade-out class to trigger the fade-out animation
+    commentcontainer.classList.remove('fade-in'); 
     var currentComment = sliderImages[currentSlide - 1].getAttribute('data-comment');
     commentElement.textContent = currentComment;
 }, 600);

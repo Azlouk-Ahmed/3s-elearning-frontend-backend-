@@ -23,14 +23,14 @@ document.addEventListener("DOMContentLoaded", function() {
         if (check3.checked) checkedLevels.push("advanced");
 
         if (checkedLevels.length === 0) {
-            // If none are selected, show all
+            
             courseBoxes.forEach(function(box) {
                 box.style.display = "flex";
             });
         } else {
             courseBoxes.forEach(function(box) {
                 const level = box.querySelector(".level");
-                const boxLevels = level.classList.value.split(" "); // Get all class names as an array
+                const boxLevels = level.classList.value.split(" "); 
                 if (checkedLevels.some(level => boxLevels.includes(level))) {
                     box.style.display = "flex";
                 } else {
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             });
         }
-        updateCourseCount(); // Update the course count after filtering
+        updateCourseCount(); 
     }
 
     function searchCourses() {
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 box.style.display = "none";
             }
         });
-        updateCourseCount(); // Update the course count after filtering
+        updateCourseCount(); 
     }
 
     check1.addEventListener("change", filterBoxes);
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
     check3.addEventListener("change", filterBoxes);
     searchInput.addEventListener("input", searchCourses);
 
-    // Initial setup
+    
     updateTotalCount();
     updateCourseCount();
 });

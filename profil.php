@@ -17,7 +17,6 @@ $pass = '';
 
 $conn = new mysqli($host, $user, $pass, $dbname);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -39,7 +38,7 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
 if ($result->num_rows > 0) {
     $user = $result->fetch_assoc();
 
-    // Fetch history records for this user
+   
     $sql = "SELECT * FROM history WHERE user_id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $user['id']);

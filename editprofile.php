@@ -22,9 +22,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $gender = $_POST['gender'];
     $img_path = $_POST['profileimage'];
     echo "img = $img_path";
-    // Check if an image file was uploaded
+    
     if ($_FILES['profile_image']['name']) {
-        $target_dir = "uploads/"; // Define your upload directory
+        $target_dir = "uploads/"; 
         $target_file = $target_dir . basename($_FILES["profile_image"]["name"]);
         
         if (!move_uploaded_file($_FILES["profile_image"]["tmp_name"], $target_file)) {
