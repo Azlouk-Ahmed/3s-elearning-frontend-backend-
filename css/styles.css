@@ -104,6 +104,19 @@ body {
     will-change: box-shadow;
 }
 
+.inst_img {
+    height: 3rem !important;
+    width: 3rem !important;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.btn a,
+.btn2 a {
+    color: white !important;
+
+}
+
 .input__container {
     position: relative;
 }
@@ -315,6 +328,7 @@ nav>svg {
     .filter--courses {
         flex-direction: column !important;
         align-items: center !important;
+        
     }
 
     .course {
@@ -328,7 +342,8 @@ nav>svg {
 
     .request--course input[type="text"],
     textarea {
-
+        color: white !important;
+        caret-color: white;
         width: 100%;
     }
 
@@ -742,6 +757,8 @@ h4 {
 
 pre {
     position: absolute;
+    z-index: -5 !important;
+    display: none;
 }
 
 .ml {
@@ -808,10 +825,19 @@ main .title {
     font-size: 20px;
 }
 
+.duration {
+    display: none;
+}
+
 .price>div {
     font-size: 10px !important;
     text-align: center;
     padding: 10px 2rem;
+}
+
+.pricemo {
+    padding: 0 !important;
+    transform: scale(1.5);
 }
 
 hr {
@@ -828,7 +854,7 @@ hr {
 }
 
 .banner {
-    height: 50vh;
+    height: 60vh;
     background-image: url("../img/banner.png");
     background-size: cover;
     display: flex;
@@ -870,6 +896,10 @@ p {
 
 .testimonials p {
     color: var(--text);
+}
+
+.div {
+    margin: 0 0 6rem 0;
 }
 
 .testimonials .df-c {
@@ -1091,6 +1121,7 @@ li span {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    padding: 0 5rem !important;
 }
 
 .fx-s {
@@ -1179,8 +1210,10 @@ li span {
 }
 
 .request--course input[type="text"],
-textarea {
+.request--course textarea {
     border: #7b7b7b96 1px solid;
+    color: white !important;
+    caret-color: white;
 }
 
 textarea {
@@ -1411,6 +1444,10 @@ label .fa-sun {
     width: fit-content !important;
 }
 
+.error img {
+    width: 5rem;
+}
+
 .bf {
     font-size: 46px !important;
 }
@@ -1545,6 +1582,10 @@ main h4 {
     height: 90vh;
     overflow: hidden;
 }
+
+ .adminform {
+    border: 2px solid var(--border);
+ }
 
 .loginform,
 .signupform {
@@ -1982,12 +2023,13 @@ img {
 @keyframes scroll {
     0% {
         transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(calc(-250px * 7));
-    }
-}
+      }50% {
+          transform: translateX(calc(-250px));
+        }
+      100% {
+          transform: translateX(calc(0));
+      }
+  }
 
 .slider {
     background: none;
@@ -2011,8 +2053,8 @@ img {
 }
 
 .slider .slide-track {
-    -webkit-animation: scroll 40s linear infinite;
-    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 30s linear infinite;
+    animation: scroll 30s linear infinite;
     display: flex;
     width: calc(250px * 14);
 }
@@ -2296,7 +2338,7 @@ img {
     transition: all 200ms linear;
 }
 
-.input-txt-div input {
+.input-txt-div input:not(input[type="file"]) {
     outline: none;
     border: 1px solid var(--border);
     height: 3rem;

@@ -1,12 +1,28 @@
+:root {
+  --primary: #8B54FF;
+  --text: #545252;
+  --title: #0F2239;
+  --bg: #f3f6fb;
+  --bgbg: #f3f6fb;
+  --light-bg: #ffffff;
+  --lighter-bg: #ffffff;
+  --border: #b8b8b8;
+  --reversalborder: #ffffff00;
+  --shadowdark: 0px 6px 13px rgb(117 117 117 / 38%);
+  --shadow: 0px 6px 13px rgb(117 117 117 / 38%);
+  --comment: rgba(110, 84, 143, 1);
+  --dark: rgba(20, 20, 20, 1);
+  --blue-dark: rgba(15, 34, 57, 1);
+}
+
 table {
     border-collapse: collapse;
-    box-shadow: 0 5px 10px #e1e5ee;
-    background-color: white;
+    background-color: var(--bg);
     text-align: left;
     overflow: hidden;
   }
   table thead {
-    box-shadow: 0 5px 10px #e1e5ee;
+    box-shadow: var(--shadowdark);
   }
   table th {
     padding: 1rem 2rem;
@@ -50,5 +66,5 @@ table {
     text-align: right;
   }
   table tr:nth-child(even) {
-    background-color: #f4f6fb;
+    background-color: var(--bgbg);
   }

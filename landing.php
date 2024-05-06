@@ -32,6 +32,7 @@ if ($courses_result->num_rows > 0) {
 
     while ($row = $courses_result->fetch_assoc()) {
         $course_item = array(
+            "id" => $row['id'],
             "title" => $row['title'],
             "image" => $row['image'],
             "due_date" => $row['due_date'],
@@ -109,8 +110,8 @@ $conn->close();
     <nav class="nav--bar df container">
       <img src="img/Layer_2.png" alt="" class="layer" srcset="" />
       <div class="links df" id="links">
-        <a href="landing.php">Home</a><a href="about.php">About Us</a><a href="coursedetails.php">Course</a
-        ><a href="courses.php">Pages</a><a href="blog.php">Blog</a><a href="contact.php">Contact Us</a>
+      <a href="landing.php">Home</a><a href="about.php">About Us</a><a href="courses.php">Courses</a
+          ><a href="blog.php">Blog</a><a href="contact.php">Contact Us</a>
       </div>
       <div class="search df">
         <input type="text" name="" id="" />
@@ -229,7 +230,7 @@ $conn->close();
           </div>
           <div class="df">
             <button class="btn">
-              Get Started
+            <a href="login.php">Get Started
               <svg
                 width="15"
                 height="10"
@@ -241,10 +242,11 @@ $conn->close();
                   d="M14.5664 5.48828L11.0664 8.98828C10.8841 9.15234 10.6745 9.23438 10.4375 9.23438C10.2005 9.23438 9.99089 9.15234 9.80859 8.98828C9.64453 8.80599 9.5625 8.59635 9.5625 8.35938C9.5625 8.1224 9.64453 7.91276 9.80859 7.73047L11.832 5.73438H1.6875C1.43229 5.73438 1.22266 5.65234 1.05859 5.48828C0.894531 5.30599 0.8125 5.08724 0.8125 4.83203C0.867188 4.30339 1.15885 4.02083 1.6875 3.98438H11.832L9.80859 1.98828C9.64453 1.80599 9.5625 1.59635 9.5625 1.35938C9.5625 1.1224 9.64453 0.912761 9.80859 0.730469C9.99089 0.566406 10.2005 0.484375 10.4375 0.484375C10.6745 0.484375 10.8841 0.566406 11.0664 0.730469L14.5664 4.23047C14.7305 4.41276 14.8125 4.6224 14.8125 4.85938C14.8125 5.09635 14.7305 5.30599 14.5664 5.48828Z"
                   fill="white"
                 />
-              </svg>
+              </svg></a>
             </button>
             <button class="secondary-btn btn2">
-              Our Courses
+            <a href="login.php">
+            Our Courses
               <svg
                 width="15"
                 height="15"
@@ -252,23 +254,25 @@ $conn->close();
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g clip-path="url(#clip0_6051_1727)">
-                  <path
-                    d="M14.5664 8.48828L11.0664 11.9883C10.8841 12.1523 10.6745 12.2344 10.4375 12.2344C10.2005 12.2344 9.99089 12.1523 9.80859 11.9883C9.64453 11.806 9.5625 11.5964 9.5625 11.3594C9.5625 11.1224 9.64453 10.9128 9.80859 10.7305L11.832 8.73438H1.6875C1.43229 8.73438 1.22266 8.65234 1.05859 8.48828C0.894531 8.30599 0.8125 8.08724 0.8125 7.83203C0.867188 7.30339 1.15885 7.02083 1.6875 6.98438H11.832L9.80859 4.98828C9.64453 4.80599 9.5625 4.59635 9.5625 4.35938C9.5625 4.1224 9.64453 3.91276 9.80859 3.73047C9.99089 3.56641 10.2005 3.48438 10.4375 3.48438C10.6745 3.48438 10.8841 3.56641 11.0664 3.73047L14.5664 7.23047C14.7305 7.41276 14.8125 7.6224 14.8125 7.85938C14.8125 8.09635 14.7305 8.30599 14.5664 8.48828Z"
+              <g clip-path="url(#clip0_6051_1727)">
+                <path
+                  d="M14.5664 8.48828L11.0664 11.9883C10.8841 12.1523 10.6745 12.2344 10.4375 12.2344C10.2005 12.2344 9.99089 12.1523 9.80859 11.9883C9.64453 11.806 9.5625 11.5964 9.5625 11.3594C9.5625 11.1224 9.64453 10.9128 9.80859 10.7305L11.832 8.73438H1.6875C1.43229 8.73438 1.22266 8.65234 1.05859 8.48828C0.894531 8.30599 0.8125 8.08724 0.8125 7.83203C0.867188 7.30339 1.15885 7.02083 1.6875 6.98438H11.832L9.80859 4.98828C9.64453 4.80599 9.5625 4.59635 9.5625 4.35938C9.5625 4.1224 9.64453 3.91276 9.80859 3.73047C9.99089 3.56641 10.2005 3.48438 10.4375 3.48438C10.6745 3.48438 10.8841 3.56641 11.0664 3.73047L14.5664 7.23047C14.7305 7.41276 14.8125 7.6224 14.8125 7.85938C14.8125 8.09635 14.7305 8.30599 14.5664 8.48828Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_6051_1727">
+                  <rect
+                    width="14"
+                    height="14"
                     fill="white"
+                    transform="matrix(1 0 0 -1 0.8125 14.8594)"
                   />
-                </g>
-                <defs>
-                  <clipPath id="clip0_6051_1727">
-                    <rect
-                      width="14"
-                      height="14"
-                      fill="white"
-                      transform="matrix(1 0 0 -1 0.8125 14.8594)"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
+                </clipPath>
+              </defs>
+            </svg>
+            </a>
+              
             </button>
           </div>
         </div>
@@ -387,7 +391,8 @@ $conn->close();
       <?php $count = 0; ?>
         <?php foreach ($courses as $course): ?>
           <?php if ($count < 4): ?>
-          <div class="box hoverimg">
+
+            <a href=<?php echo "coursedetails.php?course_id=" . $course['id']; ?> ><div class="box hoverimg">
             <img src="<?php echo $course['image']; ?>" srcset="" />
             <div class="df-c course--content">
               <div class="eval"></div>
@@ -442,7 +447,7 @@ $conn->close();
                 <div class="btn">Enroll Now</div>
               </div>
             </div>
-          </div>
+          </div> </a>
           <?php endif; ?>
     <?php $count++; ?>
         <?php endforeach; ?>
