@@ -15,112 +15,112 @@
 			<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
 		</svg>
 	</div>
-    <div class="header container bg">
-        <div>
+  <div class="header container bg">
+      <div>
+        <svg
+          width="12"
+          height="16"
+          viewBox="0 0 12 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.38338 15.6772C0.842813 9.09472 0 8.41916 0 6C0 2.68628 2.68628 0 6 0C9.31372 0 12 2.68628 12 6C12 8.41916 11.1572 9.09472 6.61662 15.6772C6.31866 16.1076 5.68131 16.1076 5.38338 15.6772ZM6 8.5C7.38072 8.5 8.5 7.38072 8.5 6C8.5 4.61928 7.38072 3.5 6 3.5C4.61928 3.5 3.5 4.61928 3.5 6C3.5 7.38072 4.61928 8.5 6 8.5Z"
+            fill="#703BF7"
+          />
+        </svg>
+        Menzel Abderrahman Bizerte, 7035
+      </div>
+      <div class="df">
+        <div class="df">
           <svg
-            width="12"
+            width="17"
             height="16"
-            viewBox="0 0 12 16"
+            viewBox="0 0 17 16"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M5.38338 15.6772C0.842813 9.09472 0 8.41916 0 6C0 2.68628 2.68628 0 6 0C9.31372 0 12 2.68628 12 6C12 8.41916 11.1572 9.09472 6.61662 15.6772C6.31866 16.1076 5.68131 16.1076 5.38338 15.6772ZM6 8.5C7.38072 8.5 8.5 7.38072 8.5 6C8.5 4.61928 7.38072 3.5 6 3.5C4.61928 3.5 3.5 4.61928 3.5 6C3.5 7.38072 4.61928 8.5 6 8.5Z"
+              d="M16.2348 11.306L12.7348 9.80597C12.5853 9.74225 12.4192 9.72882 12.2613 9.76771C12.1035 9.8066 11.9626 9.8957 11.8598 10.0216L10.3098 11.9153C7.87726 10.7684 5.91959 8.81073 4.77266 6.37815L6.66641 4.82815C6.79256 4.72555 6.88184 4.58465 6.92075 4.42676C6.95966 4.26888 6.94606 4.10262 6.88203 3.95315L5.38203 0.453154C5.31175 0.292032 5.18746 0.160481 5.03058 0.081185C4.8737 0.00188911 4.69407 -0.0201814 4.52266 0.0187791L1.27266 0.768779C1.1074 0.806941 0.959952 0.899991 0.854386 1.03274C0.74882 1.16549 0.691368 1.33011 0.691406 1.49972C0.691406 9.51534 7.18828 15.9997 15.1914 15.9997C15.3611 15.9998 15.5258 15.9424 15.6586 15.8368C15.7914 15.7313 15.8845 15.5838 15.9227 15.4185L16.6727 12.1685C16.7114 11.9962 16.6888 11.8159 16.6089 11.6585C16.529 11.501 16.3967 11.3764 16.2348 11.306Z"
               fill="#703BF7"
             />
           </svg>
-          Menzel Abderrahman Bizerte, 7035
+          +216 51 717 722
         </div>
         <div class="df">
-          <div class="df">
-            <svg
-              width="17"
-              height="16"
-              viewBox="0 0 17 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M16.2348 11.306L12.7348 9.80597C12.5853 9.74225 12.4192 9.72882 12.2613 9.76771C12.1035 9.8066 11.9626 9.8957 11.8598 10.0216L10.3098 11.9153C7.87726 10.7684 5.91959 8.81073 4.77266 6.37815L6.66641 4.82815C6.79256 4.72555 6.88184 4.58465 6.92075 4.42676C6.95966 4.26888 6.94606 4.10262 6.88203 3.95315L5.38203 0.453154C5.31175 0.292032 5.18746 0.160481 5.03058 0.081185C4.8737 0.00188911 4.69407 -0.0201814 4.52266 0.0187791L1.27266 0.768779C1.1074 0.806941 0.959952 0.899991 0.854386 1.03274C0.74882 1.16549 0.691368 1.33011 0.691406 1.49972C0.691406 9.51534 7.18828 15.9997 15.1914 15.9997C15.3611 15.9998 15.5258 15.9424 15.6586 15.8368C15.7914 15.7313 15.8845 15.5838 15.9227 15.4185L16.6727 12.1685C16.7114 11.9962 16.6888 11.8159 16.6089 11.6585C16.529 11.501 16.3967 11.3764 16.2348 11.306Z"
-                fill="#703BF7"
-              />
-            </svg>
-            +216 51 717 722
-          </div>
-          <div class="df">
-            <svg
-              width="17"
-              height="12"
-              viewBox="0 0 17 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15.7555 3.9625C15.8773 3.86563 16.0586 3.95625 16.0586 4.10938V10.5C16.0586 11.3281 15.3867 12 14.5586 12H1.55859C0.730469 12 0.0585938 11.3281 0.0585938 10.5V4.1125C0.0585938 3.95625 0.236719 3.86875 0.361719 3.96562C1.06172 4.50937 1.98984 5.2 5.17734 7.51562C5.83672 7.99687 6.94922 9.00938 8.05859 9.00313C9.17422 9.0125 10.3086 7.97813 10.943 7.51562C14.1305 5.2 15.0555 4.50625 15.7555 3.9625ZM8.05859 8C8.78359 8.0125 9.82734 7.0875 10.3523 6.70625C14.4992 3.69688 14.8148 3.43437 15.7711 2.68437C15.9523 2.54375 16.0586 2.325 16.0586 2.09375V1.5C16.0586 0.671875 15.3867 0 14.5586 0H1.55859C0.730469 0 0.0585938 0.671875 0.0585938 1.5V2.09375C0.0585938 2.325 0.164844 2.54062 0.346094 2.68437C1.30234 3.43125 1.61797 3.69688 5.76484 6.70625C6.28984 7.0875 7.33359 8.0125 8.05859 8Z"
-                fill="#703BF7"
-              />
-            </svg>
-            contact@3s-spring.tn
-          </div>
-        </div>
-      </div>
-      <nav class="nav--bar df container">
-        <img src="img/Layer_2.png" alt="" class="layer" srcset="" />
-        <div class="links df" id="links">
-          <a href="landing.php">Home</a><a href="about.php">About Us</a><a href="courses.php">Courses</a
-          ><a href="blog.php">Blog</a><a href="contact.php">Contact Us</a>
-        </div>
-        <div class="search df">
-          <input type="text" name="" id="" />
           <svg
-            width="56"
-            height="56"
-            viewBox="0 0 56 56"
+            width="17"
+            height="12"
+            viewBox="0 0 17 12"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <rect y="0.5" width="56" height="55" rx="5" fill="#8B54FF" />
-            <g clip-path="url(#clip0_10017_2160)">
-              <path
-                d="M33.75 27.7656C33.75 29.5625 33.1641 31.2422 32.1875 32.5703L37.1094 37.5312C37.6172 38 37.6172 38.8203 37.1094 39.289C36.6406 39.7968 35.8203 39.7968 35.3516 39.289L30.3906 34.3281C29.0625 35.3437 27.3828 35.8906 25.625 35.8906C21.1328 35.8906 17.5 32.2578 17.5 27.7656C17.5 23.3125 21.1328 19.6406 25.625 19.6406C30.0781 19.6406 33.75 23.3125 33.75 27.7656ZM25.625 33.3906C28.7109 33.3906 31.25 30.8906 31.25 27.7656C31.25 24.6797 28.7109 22.1406 25.625 22.1406C22.5 22.1406 20 24.6797 20 27.7656C20 30.8906 22.5 33.3906 25.625 33.3906Z"
-                fill="white"
-              />
-            </g>
-            <defs>
-              <clipPath id="clip0_10017_2160">
-                <rect
-                  width="21"
-                  height="21"
-                  fill="white"
-                  transform="translate(17.5 19.1406)"
-                />
-              </clipPath>
-            </defs>
+            <path
+              d="M15.7555 3.9625C15.8773 3.86563 16.0586 3.95625 16.0586 4.10938V10.5C16.0586 11.3281 15.3867 12 14.5586 12H1.55859C0.730469 12 0.0585938 11.3281 0.0585938 10.5V4.1125C0.0585938 3.95625 0.236719 3.86875 0.361719 3.96562C1.06172 4.50937 1.98984 5.2 5.17734 7.51562C5.83672 7.99687 6.94922 9.00938 8.05859 9.00313C9.17422 9.0125 10.3086 7.97813 10.943 7.51562C14.1305 5.2 15.0555 4.50625 15.7555 3.9625ZM8.05859 8C8.78359 8.0125 9.82734 7.0875 10.3523 6.70625C14.4992 3.69688 14.8148 3.43437 15.7711 2.68437C15.9523 2.54375 16.0586 2.325 16.0586 2.09375V1.5C16.0586 0.671875 15.3867 0 14.5586 0H1.55859C0.730469 0 0.0585938 0.671875 0.0585938 1.5V2.09375C0.0585938 2.325 0.164844 2.54062 0.346094 2.68437C1.30234 3.43125 1.61797 3.69688 5.76484 6.70625C6.28984 7.0875 7.33359 8.0125 8.05859 8Z"
+              fill="#703BF7"
+            />
           </svg>
+          contact@3s-spring.tn
         </div>
-        <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M5 6.5H19V8H5V6.5Z" fill="#703BF7"/>
-          <path d="M5 16.5H19V18H5V16.5Z" fill="#703BF7"/>
-          <path d="M5 11.5H19V13H5V11.5Z" fill="#703BF7"/>
-          </svg>
-          <div class="night-mode-button">
-            <input type="checkbox" class="checkbox" id="night-mode">
-            <label for="night-mode" class="label">
-              <svg  class="fa-moon"  version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-       viewBox="0 0 56 56" xml:space="preserve">
-      <path style="fill:#A5A5A4;" d="M29,28c0-11.917,7.486-22.112,18-26.147C43.892,0.66,40.523,0,37,0C21.561,0,9,12.561,9,28
-      s12.561,28,28,28c3.523,0,6.892-0.66,10-1.853C36.486,50.112,29,39.917,29,28z"/>
-      </svg>
-      <svg  width="30px" class="fa-sun" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-       viewBox="0 0 52 52" xml:space="preserve">
-      <ellipse style="fill:#EEAF4B;" cx="26" cy="26" rx="22.5" ry="26"/>
-      <path style="fill:#F0C419;" d="M26,48C15.799,48,7.5,38.131,7.5,26S15.799,4,26,4s18.5,9.869,18.5,22S36.201,48,26,48z"/>
-      <path style="fill:#F3D55B;" d="M26,35c-2.543,0-5.5-3.932-5.5-9s2.957-9,5.5-9s5.5,3.932,5.5,9S28.543,35,26,35z"/>
-      </svg>
-              <div class="blob"></div>
-            </label>
-          </div>
-      </nav>
+      </div>
+    </div>
+    <nav class="nav--bar df container">
+      <img src="img/Layer_2.png" alt="" class="layer" srcset="" />
+      <div class="links df" id="links">
+      <a href="landing.php">Home</a><a href="about.php">About Us</a><a href="courses.php">Courses</a
+          ><a href="blog.php">Blog</a><a href="contact.php">Contact Us</a>
+      </div>
+      <div class="nav-profile df">
+      <?php
+session_start();
+if (isset($_SESSION['email'])) {
+    // If session exists, display user's name and image
+    $name = $_SESSION['name'];
+    $profile_image = $_SESSION['profile_image'];
+?>
+    <div class="user-info df">
+        <img src="<?php echo $profile_image; ?>" alt="Profile Image">
+        <div class="name">
+            <?php if ($_SESSION['role'] == 0): ?>
+                <a href="profil.php"><?php echo $name; ?></a>
+            <?php else: ?>
+                <a href="admin.php"><?php echo $name; ?></a>
+            <?php endif; ?>
+        </div>
+        <div class="btn">
+            <a href="logout.php">logout</a>
+        </div>
+    </div>
+<?php } else { ?>
+    <div class="btn">
+        <a href="login.php">login now</a>
+    </div>
+<?php } ?>
+
+</div>
+      <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 6.5H19V8H5V6.5Z" fill="#703BF7"/>
+        <path d="M5 16.5H19V18H5V16.5Z" fill="#703BF7"/>
+        <path d="M5 11.5H19V13H5V11.5Z" fill="#703BF7"/>
+        </svg>
+        <div class="night-mode-button">
+          <input type="checkbox" class="checkbox" id="night-mode">
+          <label for="night-mode" class="label">
+            <svg  class="fa-moon"  version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+     viewBox="0 0 56 56" xml:space="preserve">
+    <path style="fill:#A5A5A4;" d="M29,28c0-11.917,7.486-22.112,18-26.147C43.892,0.66,40.523,0,37,0C21.561,0,9,12.561,9,28
+    s12.561,28,28,28c3.523,0,6.892-0.66,10-1.853C36.486,50.112,29,39.917,29,28z"/>
+    </svg>
+    <svg  width="30px" class="fa-sun" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+     viewBox="0 0 52 52" xml:space="preserve">
+    <ellipse style="fill:#EEAF4B;" cx="26" cy="26" rx="22.5" ry="26"/>
+    <path style="fill:#F0C419;" d="M26,48C15.799,48,7.5,38.131,7.5,26S15.799,4,26,4s18.5,9.869,18.5,22S36.201,48,26,48z"/>
+    <path style="fill:#F3D55B;" d="M26,35c-2.543,0-5.5-3.932-5.5-9s2.957-9,5.5-9s5.5,3.932,5.5,9S28.543,35,26,35z"/>
+    </svg>
+            <div class="blob"></div>
+          </label>
+        </div>
+    </nav>
 
       <div class="page container center">
         <div class="df-c">

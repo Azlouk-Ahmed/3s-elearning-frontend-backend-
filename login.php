@@ -59,22 +59,34 @@
     <a href="landing.php">Home</a><a href="about.php">About Us</a><a href="courses.php">Courses</a
           ><a href="blog.php">Blog</a><a href="contact.php">Contact Us</a>
     </div>
-    <div class="search df">
-      <input type="text" name="" id="" />
-      <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect y="0.5" width="56" height="55" rx="5" fill="#8B54FF" />
-        <g clip-path="url(#clip0_10017_2160)">
-          <path
-            d="M33.75 27.7656C33.75 29.5625 33.1641 31.2422 32.1875 32.5703L37.1094 37.5312C37.6172 38 37.6172 38.8203 37.1094 39.289C36.6406 39.7968 35.8203 39.7968 35.3516 39.289L30.3906 34.3281C29.0625 35.3437 27.3828 35.8906 25.625 35.8906C21.1328 35.8906 17.5 32.2578 17.5 27.7656C17.5 23.3125 21.1328 19.6406 25.625 19.6406C30.0781 19.6406 33.75 23.3125 33.75 27.7656ZM25.625 33.3906C28.7109 33.3906 31.25 30.8906 31.25 27.7656C31.25 24.6797 28.7109 22.1406 25.625 22.1406C22.5 22.1406 20 24.6797 20 27.7656C20 30.8906 22.5 33.3906 25.625 33.3906Z"
-            fill="white" />
-        </g>
-        <defs>
-          <clipPath id="clip0_10017_2160">
-            <rect width="21" height="21" fill="white" transform="translate(17.5 19.1406)" />
-          </clipPath>
-        </defs>
-      </svg>
+    <div class="nav-profile df">
+      <?php
+session_start();
+if (isset($_SESSION['email'])) {
+    // If session exists, display user's name and image
+    $name = $_SESSION['name'];
+    $profile_image = $_SESSION['profile_image'];
+?>
+    <div class="user-info df">
+        <img src="<?php echo $profile_image; ?>" alt="Profile Image">
+        <div class="name">
+            <?php if ($_SESSION['role'] == 0): ?>
+                <a href="profil.php"><?php echo $name; ?></a>
+            <?php else: ?>
+                <a href="admin.php"><?php echo $name; ?></a>
+            <?php endif; ?>
+        </div>
+        <div class="btn">
+            <a href="logout.php">logout</a>
+        </div>
     </div>
+<?php } else { ?>
+    <div class="btn">
+        <a href="login.php">login now</a>
+    </div>
+<?php } ?>
+
+</div>
     <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M5 6.5H19V8H5V6.5Z" fill="#703BF7" />
       <path d="M5 16.5H19V18H5V16.5Z" fill="#703BF7" />

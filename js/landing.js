@@ -4,7 +4,15 @@ var currentSlide = 1;
 var slideNumberElement = document.getElementById('slide-number');
 var nextButton = document.getElementById('next');
 var prevButton = document.getElementById('prev');
-
+var allATagsArray = Array.from(document.getElementsByTagName('a'));
+console.log("kjsdgnskd");
+allATagsArray.forEach(function(element) {
+    if(element.style.width =="0px") {
+        console.log("zero");
+    }else {
+        console.log("no");
+    }
+});
 var commentElement = document.getElementById('comment');
 var commentcontainer = document.getElementById('commentcontainer');
 var username = document.getElementById('personname');
@@ -43,6 +51,7 @@ function nextSlide() {
         }
         theChecker();
 }
+
 
 
 function prevSlide() {

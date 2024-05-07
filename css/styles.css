@@ -769,7 +769,7 @@ pre {
     flex-direction: column;
     display: flex;
     background: var(--light-bg);
-    width: 19rem;
+    width: 18rem;
     height: 26rem;
     text-align: justify;
     font-size: 13px;
@@ -1066,6 +1066,10 @@ a:hover {
     color: white !important;
 }
 
+.request--course select {
+    background: var(--blue-dark) !important;
+}
+
 .request--course input[type="date"] {
     background: transparent url("../img/icons8-calendar-50.png") 97% 50% no-repeat !important;
     background-size: 20px 20px !important;
@@ -1111,6 +1115,21 @@ select {
 .c-right span,
 li span {
     margin: 0 !important;
+}
+
+#landingcont {
+    height: 67vh;
+    overflow: hidden;
+    gap: 2rem;
+    width: 100%;
+}
+
+a:empty {
+   display: none;
+}
+
+#landingcont .box {
+    width: 18rem !important;
 }
 
 .c-left ul {
@@ -1801,6 +1820,7 @@ iframe {
 
 .nav-profile img {
     width: 3rem;
+    height: 3rem;
     border-radius: 50%;
 }
 

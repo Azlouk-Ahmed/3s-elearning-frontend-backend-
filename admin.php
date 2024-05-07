@@ -10,6 +10,7 @@
 </head>
 <body>
 <?php
+session_start(); 
 $host = 'localhost';  
 $dbname = 'e-learning'; 
 $user = 'root';     
@@ -21,7 +22,17 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$email = $_GET['email'];
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+if (isset($_SESSION['name'])) {
+    // If session exists, display user's name and image
+    $email = $_SESSION['email'];
+} else {
+    // If session doesn't exist, redirect to the login page
+    header("Location: login.php");
+    exit;
+}
 
 // Select user information
 $sql_user = "SELECT * FROM user WHERE email = ?";
@@ -49,6 +60,13 @@ $result_course_request = $conn->query($sql_course_request);
 // Fetch all course requests
 $course_requests = $result_course_request->fetch_all(MYSQLI_ASSOC);
 
+// Select all reservations
+$sql_reservation = "SELECT * FROM reservation";
+$result_reservation = $conn->query($sql_reservation);
+
+// Fetch all reservations
+$reservations = $result_reservation->fetch_all(MYSQLI_ASSOC);
+
 // Display success or error message if set
 if (isset($_GET['success']) && $_GET['success'] == 'true') {
     echo '<div class="success df "><img src="img/sucess.png"> Successfully updated info</div>';
@@ -61,6 +79,7 @@ $sql_courses = "SELECT * FROM courses";
 $result_courses = $conn->query($sql_courses);
 
 ?>
+
 
 
 <div class="progress-wrap float">
@@ -123,34 +142,23 @@ $result_courses = $conn->query($sql_courses);
       <a href="landing.php">Home</a><a href="about.php">About Us</a><a href="courses.php">Courses</a
           ><a href="blog.php">Blog</a><a href="contact.php">Contact Us</a>
       </div>
-      <div class="search df">
-        <input type="text" name="" id="" />
-        <svg
-          width="56"
-          height="56"
-          viewBox="0 0 56 56"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect y="0.5" width="56" height="55" rx="5" fill="#8B54FF" />
-          <g clip-path="url(#clip0_10017_2160)">
-            <path
-              d="M33.75 27.7656C33.75 29.5625 33.1641 31.2422 32.1875 32.5703L37.1094 37.5312C37.6172 38 37.6172 38.8203 37.1094 39.289C36.6406 39.7968 35.8203 39.7968 35.3516 39.289L30.3906 34.3281C29.0625 35.3437 27.3828 35.8906 25.625 35.8906C21.1328 35.8906 17.5 32.2578 17.5 27.7656C17.5 23.3125 21.1328 19.6406 25.625 19.6406C30.0781 19.6406 33.75 23.3125 33.75 27.7656ZM25.625 33.3906C28.7109 33.3906 31.25 30.8906 31.25 27.7656C31.25 24.6797 28.7109 22.1406 25.625 22.1406C22.5 22.1406 20 24.6797 20 27.7656C20 30.8906 22.5 33.3906 25.625 33.3906Z"
-              fill="white"
-            />
-          </g>
-          <defs>
-            <clipPath id="clip0_10017_2160">
-              <rect
-                width="21"
-                height="21"
-                fill="white"
-                transform="translate(17.5 19.1406)"
-              />
-            </clipPath>
-          </defs>
-        </svg>
-      </div>
+      <div class="nav-profile df">
+        <?php if (!empty($user['img'])): ?>
+        <img src="<?php echo $user['img']; ?>" alt="Profile Image">
+        <?php else: ?>
+        <img src="img/profil.png" alt="Profile Image">
+        <?php endif; ?>
+        <div class="name">
+            <?php if ($_SESSION['role'] == 0): ?>
+                <a href="profil.php?email=<?php echo $email ?>"><?php echo $user['name']; ?></a>
+            <?php else: ?>
+                <a href="admin.php"><?php echo $user['name']; ?></a>
+            <?php endif; ?>
+        </div>
+        <div class="btn">
+            <a href="logout.php">logout</a>
+        </div>
+    </div>
       <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M5 6.5H19V8H5V6.5Z" fill="#703BF7"/>
         <path d="M5 16.5H19V18H5V16.5Z" fill="#703BF7"/>
@@ -175,7 +183,7 @@ $result_courses = $conn->query($sql_courses);
         </div>
     </nav>
       <div class="title ta-c"> hello admin</div>
-      <form class="center container" action="editprofile.php" method="post" enctype="multipart/form-data">
+      <form class="center container" action="editprofile.php?role='1'" method="post" enctype="multipart/form-data">
     <div class="editprofil container gap-3 df fx-s">
         <div class="df-c ai-c img">
             <?php if (!empty($user['img'])): ?>
@@ -241,15 +249,18 @@ $result_courses = $conn->query($sql_courses);
         <input type="file" id="cover" name="cover" placeholder="Cover" required>
         <label for="cover">Cover</label>
     </div>
+    <select class="w-100" name="category" required>
+        <option value="Business">Business</option>
+        <option value="Development">Development</option>
+        <option value="Marketing">Marketing</option>
+        <option value="Finance">Finance</option>
+        <option value="Design">Design</option>
+        <option value="Data Science">Data Science</option>
+    </select>
 
     <div class="input-txt-div">
         <input type="text" id="instructorname" name="instructorname" placeholder="Instructor Name" required>
         <label for="instructorname">Instructor Name</label>
-    </div>
-
-    <div class="input-txt-div">
-        <input type="text" id="category" name="category" placeholder="Category" required>
-        <label for="category">Category</label>
     </div>
 
     <div class="input-txt-div">
@@ -390,7 +401,7 @@ $result_courses = $conn->query($sql_courses);
 </table>
 </div>
 <div class="div center">
-    <div class="title">Messages</div>
+    <div class="title">contact</div>
 
     <!-- Display contact messages -->
     <?php
@@ -429,7 +440,7 @@ $result_courses = $conn->query($sql_courses);
 </div>
 </div>
 <div class="div center">
-    <div class="title">Requests</div>
+    <div class="title">Course Requests</div>
 
     <!-- Display course requests -->
     <?php
@@ -478,6 +489,40 @@ $result_courses = $conn->query($sql_courses);
     }
     ?>
 </div>
+
+<div class="div center">
+    <div class="title">Reservations</div>
+
+    <!-- Display reservations -->
+    <?php
+    if ($result_reservation->num_rows > 0) {
+        ?>
+        <table class="mt4">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Course ID</th>
+                    <th>User Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach ($reservations as $reservation) {
+                    echo "<tr>";
+                    echo "<td>{$reservation['id']}</td>";
+                    echo "<td>{$reservation['course_id']}</td>";
+                    echo "<td>{$reservation['user_email']}</td>";
+                    echo "</tr>";
+                }
+                ?>
+            </tbody>
+        </table>
+    <?php } else {
+        echo "<div style='margin : 1rem 0; padding: 0 1rem' class='error df tw wfc '><img src='img/error.png'> It's empty here</div>";
+    }
+    ?>
+</div>
+
 
 <div class="footer container center ">
         <div class="df fx-s">

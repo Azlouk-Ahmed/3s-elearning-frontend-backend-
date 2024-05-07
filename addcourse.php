@@ -12,6 +12,7 @@ if ($conn->connect_error) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Course Details
+    $email = $_GET['email'];
     $title = $_POST['title'];
     $cover = uploadFile('cover', 'uploads/');
     $instructorname = $_POST['instructorname'];
@@ -39,16 +40,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $duration = $_POST['duration'];
 
     // Insert into courses
-    $stmt = $conn->prepare("INSERT INTO `courses`(`course_details_id`, `title`, `image`, `due_date`, `level`, `amount`, `places`, `lessons`, `duration`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("issssssss", $course_details_id, $title, $image, $due_date, $level, $amount, $places, $lessons, $duration);
+    $stmt = $conn->prepare("INSERT INTO `courses`(`course_details_id`, `title`, `image`, `due_date`, `level`, `amount`, `places`, `lessons`, `duration`, `category`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("isssssssss", $course_details_id, $title, $image, $due_date, $level, $amount, $places, $lessons, $duration, $category);
     if ($stmt->execute()) {
         header("Location: admin.php?success=true&email=$email");
-    exit;
+        exit();
     } else {
         echo "Error: " . $stmt->error;
     }
     $stmt->close();
 }
+
+
+
 
 function uploadFile($inputName, $targetDir) {
     $targetFile = $targetDir . basename($_FILES[$inputName]["name"]);

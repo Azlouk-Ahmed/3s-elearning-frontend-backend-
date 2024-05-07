@@ -11,6 +11,7 @@
     <title>profile</title>
 </head>
 <?php
+session_start(); 
 $host = 'localhost';  
 $dbname = 'e-learning'; 
 $user = 'root';    
@@ -21,8 +22,14 @@ $conn = new mysqli($host, $user, $pass, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
-$email = $_GET['email'];
+if (isset($_SESSION['name'])) {
+    // If session exists, display user's name and image
+    $email = $_SESSION['email'];
+} else {
+    // If session doesn't exist, redirect to the login page
+    header("Location: login.php");
+    exit;
+}
 
 $sql = "SELECT * FROM user WHERE email = ?";
 $stmt = $conn->prepare($sql);
@@ -114,7 +121,14 @@ $conn->close();
         <img src="img/profil.png" alt="Profile Image">
         <?php endif; ?>
         <div class="name">
-            <a href=<?php echo "profil.php?email=$email" ?>><?php echo $user['name']; ?></a>
+            <?php if ($_SESSION['role'] == 0): ?>
+                <a href="profil.php?email=<?php echo $email ?>"><?php echo $user['name']; ?></a>
+            <?php else: ?>
+                <a href="admin.php"><?php echo $user['name']; ?></a>
+            <?php endif; ?>
+        </div>
+        <div class="btn">
+            <a href="logout.php">logout</a>
         </div>
     </div>
     <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -142,7 +156,7 @@ $conn->close();
         </label>
     </div>
 </nav>
-<form class="center container" action="editprofile.php" method="post" enctype="multipart/form-data">
+<form class="center container" action="editprofile.php?role='0'" method="post" enctype="multipart/form-data">
     <div class="editprofil container gap-3 df fx-s">
         <div class="df-c ai-c img">
             <?php if (!empty($user['img'])): ?>

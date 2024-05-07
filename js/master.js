@@ -2,7 +2,7 @@ let dark__button = document.querySelector(".checkbox");
 const darkMode = localStorage.getItem("dark-mode");
 var quizimg = document.querySelector("#quizimg");
 let banner = document.querySelector(".page");
-
+console.log("kjsdgnskd");
 if (darkMode === "enabled") {
 
     dark__button.checked = true;

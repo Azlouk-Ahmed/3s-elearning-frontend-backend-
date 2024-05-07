@@ -3,7 +3,7 @@ $host = 'localhost';
 $dbname = 'e-learning'; 
 $user = 'root';    
 $pass = '';        
-
+session_start();
 $conn = new mysqli($host, $user, $pass, $dbname);
 
 if ($conn->connect_error) {
@@ -26,6 +26,10 @@ if ($result->num_rows == 0) {
 } else {
     $row = $result->fetch_assoc();
     if ($password === $row['password']) {
+        $_SESSION['profile_image'] = $row['img'];
+        $_SESSION['name'] = $row['name'];
+        $_SESSION['email'] = $email;
+        $_SESSION['role'] = $row['role'];
         if($row['role'] == 0){
             header("Location: profil.php?email=$email");
            exit;

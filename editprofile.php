@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
+    $role = $_SESSION['role'];
     $name = $_POST['name'];
     $lastname = $_POST['lastname'];
     $email = $_POST['email'];
@@ -46,9 +46,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     
     if ($success) {
-        
-        header("Location: profil.php?email=$email&success=true");
-        exit();
+        $_SESSION['email'] = $email;
+        $_SESSION['profile_image'] = $img_path;
+        $_SESSION['name'] = $name;
+        if($role == 0) {
+            header("Location: profil.php?email=$email&success=true");
+            exit();
+
+        }
+        else {
+            header("Location: admin.php?email=$email&success=true");
+            exit();
+
+
+        }
     } else {
         
         header("Location: editprofile.php?success=false");
